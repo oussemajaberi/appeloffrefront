@@ -1,0 +1,25 @@
+.Add_offre_form
+{
+  margin: 20px 0;
+}
+
+.selected-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.close-icon {
+  cursor: pointer;
+  margin-left: 4px;
+}
+

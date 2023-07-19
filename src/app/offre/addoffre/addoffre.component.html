@@ -1,0 +1,31 @@
+<div style="margin:100px auto;display: flex;justify-content: center;max-width: 80%;" class="form-group">
+  <div style="margin: 100px 0" class="container">
+    <h3 style="text-align: center;">Ajouter votre Offre</h3>
+    <form [formGroup]="offreForm" (ngSubmit)="submit()">
+      <div class="Add_offre_form">
+        <label for="titre">Title</label>
+        <input id="titre" type="text" formControlName="titre" required class="form-control">
+      </div>
+      <div class="Add_offre_form">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" formControlName="description" required></textarea>
+      </div>
+      <div class="Add_offre_form">
+        <label for="tags">Tags (space-separated)</label>
+        <input class="form-control" id="tags" type="text" formControlName="tags"
+        #tagsInput (keyup)="onTagInputChange(tagsInput)">
+
+        <div class="selected-tags">
+          <span *ngFor="let tag of selectedTags" class="tag">
+            {{ tag }}
+            <span class="close-icon" (click)="removeTag(tag)">&times;</span>
+          </span>
+        </div>
+
+
+
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
